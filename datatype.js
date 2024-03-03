@@ -1,0 +1,5 @@
+console.log(typeof 'khushisaumya')
+console.log(typeof 16) 
+console.log(typeof true) 
+console.log(typeof null) 
+console.log(typeof undefined)

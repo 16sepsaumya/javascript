@@ -1,0 +1,1 @@
+var firstname = "khushi", lastname = "saumya", maritalstatus = "single", country = "India", age = 20;

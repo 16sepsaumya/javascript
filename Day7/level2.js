@@ -19,6 +19,25 @@ solveLinEquation(2, 3, -6);
 
 
 //ans2
+function solveQuadEquation(a, b, c) {
+    const discriminant = b * b - 4 * a * c;
+    if (discriminant > 0) {
+        const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        return [root1, root2];
+    } else if (discriminant === 0) {
+        const root = -b / (2 * a);
+        return [root];
+    } else {
+        return [];
+    }
+}
+const a1= 1;
+const b1 = -3;
+const c1 = 2;
+
+const roots = solveQuadEquation(a1, b1, c1);
+console.log("Roots are:-",roots); 
 
 
 
@@ -32,10 +51,24 @@ const numbers = [1, 2, 3, 4, 5];
 console.log(numbers)
 
 //ans4
-function showDateTime(){
-    return 
-  
+function showDateTime() {
+    var currentDate = new Date();
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1; 
+    var year = currentDate.getFullYear();
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    day = a4(day);
+    month = a4(month);
+    hours = a4(hours);
+    minutes = a4(minutes);
+    var formattedDateTime = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes;
+    console.log(formattedDateTime);
 }
+function a4(num) {
+    return (num < 10 ? '0' : '') + num;
+}
+showDateTime();
 
 
 //ans5
@@ -137,16 +170,6 @@ function swapValues(a,b){
 
 
             //ans13
-            function evensAndOdds(number) {
-            let evens=0;
-            let odds=0
-            let digits=number.toString().split(' ').map(Number)
-               digits.for
-            }
-            console.log(sumOfEven(100));
-
-
-            //ans14
             function evensAndOdds(n) {
                 let counteven = 0
                 let countodd = 0
@@ -165,8 +188,78 @@ function swapValues(a,b){
                 console.log(evensAndOdds(100))
 
 
-                //ans15
+            //ans14
+            function sumAllNums() {
+                let sum = 0
+                for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i]
+                }
+                return sum
+                }
+                console.log(sumAllNums(12, 22, 13, 34)) 
             
+
+
+                //ans15
+                function generateRandomUserIp() {
+                    const a1 = Math.floor(Math.random() * 256); 
+                    const a2 = Math.floor(Math.random() * 256);
+                    const a3 = Math.floor(Math.random() * 256);
+                    const a4 = Math.floor(Math.random() * 256);
+                    const ipAddress = `${a1}.${a2}.${a3}.${a4}`;
+                    
+                    return ipAddress;
+                }
+                const randomIp = generateRandomUserIp();
+                console.log(randomIp); 
+
+
+                //ans16
+                function generateRandomMacAddress() {
+                    const characters = '0123456789ABCDEF';
+            let macAddress = ''; 
+            for (let i = 0; i < 6; i++) {
+                       const part = characters[Math.floor(Math.random() * characters.length)];
+                        macAddress += part;
+                if (i < 5) {
+                            macAddress += ':';
+                        }
+                    }
+                return macAddress; 
+                }
+                const randomMac = generateRandomMacAddress();
+                console.log(randomMac);
+                
+
+            //ans17
+            function randomHexaNumberGenerator() {
+                const characters = '0123456789ABCDEF';
+            let hexadecimalnumber = ''; 
+            for (let i = 0; i < 6; i++) {
+                    const digit = characters[Math.floor(Math.random() * characters.length)];
+                    hexadecimalnumber += digit;
+                }
+            return hexadecimalnumber;
+            }
+            const randomHexNumber = randomHexaNumberGenerator();
+            console.log(randomHexNumber); 
+
+
+            //ans18
+            function userIdGenerator() {
+                const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let userIdGenerator = ''; 
+            for (let i = 0; i < 6; i++) {
+                    const digit = characters[Math.floor(Math.random() * characters.length)];
+                    userIdGenerator += digit;
+                }
+            return userIdGenerator;
+            }
+            const randomuserIdGenerator = userIdGenerator();
+            console.log(randomuserIdGenerator); 
+
+            
+                
             
                 
 

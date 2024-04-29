@@ -22,28 +22,21 @@ console.log(factorial(5));
 
 //ans13
 function average(arr) {
-    // Check if the array is empty
     if (arr.length === 0) {
-        return 0; // Return 0 for an empty array
+        return 0; 
     }
-    
-    // Check if all array items are numbers
     const allNumbers = arr.filter(item => typeof item === 'number');
     if (allNumbers.length !== arr.length) {
-        return "Array contains non-numeric values"; // Return feedback if non-numeric values are found
+        return "Array contains non-numeric values"; 
     }
     const sum = arr.reduce((acc, val) => acc + val, 0);
     const avg = sum / arr.length;
     
     return avg;
 }
-
-// Example usage:
 const arr1 = [1, 2, 3, 4, 5];
 console.log(average(arr1));
       
-
-
 //ans15
 function isPrime(num) {
     if (num < 2) {
@@ -58,8 +51,6 @@ function isPrime(num) {
 }
 console.log(isPrime(7))
 
-
-//ans17
 
 
 
